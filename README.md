@@ -1,6 +1,6 @@
 # Genetic Algorithm for identifying optimal services
 
-##1. Project Setup
+## 1. Project Setup
 1. Import Project
 2. Add libraries to web-inf of target folder.  
 Go to `project structure -> Artifacts -> available elements -> put to web-inf folder`   
@@ -8,7 +8,7 @@ so that the libraries will be accessible
 3. update the `filePath` from `GAWebService` module to the input file path. which is `data/iput.txt`
 4. Start the server. I have used `Tomcat 7.0.96`
 
-##2. Project Structure
+## 2. Project Structure
 
     data ->                         contains input text file  
     screenshots ->                  contains screenshots of api results
@@ -18,10 +18,10 @@ so that the libraries will be accessible
             GeneticAlgorithm ->     Custom implementation of genetic algorithm
             GAWebService ->         Handler class for Genetic Algorithm, prepares data in required format and interacts with GeneticAlgorithm Class  
 
-##3. Screenshots
+## 3. Screenshots
 Located in the screenshots folder
 
-##4. Custom implementation of Genetic Algorithm
+## 4. Custom implementation of Genetic Algorithm
 The project is not using any libraries for Genetic Algorithm  
 
 I have implemented a genetic algorithm to have complete control over the flow and avoiding understanding of library-specific functionalities.
@@ -48,15 +48,15 @@ I am using the following fitness function:
 
 
 #### Flow
-#####1. initialize the population (random)
+##### 1. initialize the population (random)
 Initial population is created with random values for genes. 
 Depending upon the population size parameter passed the population is created.
 
-#####2. create mating pool
+##### 2. create mating pool
 Fitness is calculated for every gene by using fitness function.  
 Higher the fitness value, higher the chances of picking up the gene for reproduction (Survival of the fittest!).  
 
-#####3. new genes creation till we create the new population
+##### 3. new genes creation till we create the new population
 
     1. selection of parents from the mating pool
        Select two genes from mating pool
@@ -70,11 +70,11 @@ We replace the new population with old population and we call it the generation.
 
 The idea is after every generation the population would contain more fitter genes compared to previous generation. 
 
-##5. Results
+## 5. Results
 Services - S11, S22, S33  
 fitness value - 1.236679843068123
 
-##6. API
+## 6. API
 endpoint - api/ga  
 Query Parameters - populationsize, evolutions, mutationrate
 
